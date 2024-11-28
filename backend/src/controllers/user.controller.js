@@ -97,18 +97,18 @@ const logIn = asyncHandler(async (req, res) => {
   }
   // console.log(user.email)
 
-  const allowedEmails = [
-    "chetnadigitalmolecule@gmail.com",
-    "suraj@digitalmolecule.in",
-  ];
+  // const allowedEmails = [
+  //   "chetnadigitalmolecule@gmail.com",
+  //   "suraj@digitalmolecule.in",
+  // ];
 
-  // Check if the user's email is in the allowed list
-  if (!allowedEmails.includes(user.email)) {
-    throw new ApiError(
-      403,
-      "Access denied. This email is not allowed to log in."
-    );
-  }
+  // // Check if the user's email is in the allowed list
+  // if (!allowedEmails.includes(user.email)) {
+  //   throw new ApiError(
+  //     403,
+  //     "Access denied. This email is not allowed to log in."
+  //   );
+  // }
   const isPasswordCorrect = await bcrypt.compare(
     password,
     user?.password || ""

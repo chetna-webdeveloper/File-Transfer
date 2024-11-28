@@ -1,1 +1,1 @@
-export const DB_NAME= "anything"
+export const DB_NAME= "FileTransfer"
